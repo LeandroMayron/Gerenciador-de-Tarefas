@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Atividade JavaScript</title>
+</head>
+
+<body>
+    <header>
+        <input type="text" id="buscar" placeholder="Pesquisar por título">
+    </header>
+    <main>
+        <section id="tarefas">
+            <h2>Tarefas<button onclick="novaTarefa()">Nova Tarefa</button></h2>
+            <h6>Nenhuma tarefa registrada</h6>
+
+            <ul>
+                <li>
+                    <h5>Titulo Tarefa</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, odio ducimus omnis, rem nesciunt
+                        id ullam laboriosam accusantium eligendi minima pariatur cum consequuntur sunt reprehenderit
+                        impedit nobis? Consectetur, earum aut!</p>
+                    <div class="actions">
+                        <box-icon name="trash"></box-icon>
+                    </div>
+                </li>
+                <li>
+                    <h5>Titulo Tarefa</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, odio ducimus omnis, rem nesciunt
+                        id ullam
+                        laboriosam accusantium eligendi minima pariatur cum consequuntur sunt reprehenderit impedit
+                        nobis? Consectetur,
+                        earum aut!</p>
+                    <div class="actions">
+                        <box-icon name="trash"></box-icon>
+                    </div>
+                </li>
+                <li>
+                    <h5>Titulo Tarefa</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, odio ducimus omnis, rem nesciunt
+                        id ullam
+                        laboriosam accusantium eligendi minima pariatur cum consequuntur sunt reprehenderit impedit
+                        nobis? Consectetur,
+                        earum aut!</p>
+                    <div class="actions">
+                        <box-icon name="trash"></box-icon>
+                    </div>
+                </li>
+                <li>
+                    <h5>Titulo Tarefa</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, odio ducimus omnis, rem nesciunt
+                        id ullam
+                        laboriosam accusantium eligendi minima pariatur cum consequuntur sunt reprehenderit impedit
+                        nobis? Consectetur,
+                        earum aut!</p>
+                    <div class="actions">
+                        <box-icon name="trash"></box-icon>
+                    </div>
+                </li>
+                <li>
+                    <h5>Titulo Tarefa</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, odio ducimus omnis, rem nesciunt
+                        id ullam
+                        laboriosam accusantium eligendi minima pariatur cum consequuntur sunt reprehenderit impedit
+                        nobis? Consectetur,
+                        earum aut!</p>
+                    <div class="actions">
+                        <box-icon name="trash"></box-icon>
+                    </div>
+                </li>
+                <li>
+                    <h5>Titulo Tarefa</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, odio ducimus omnis, rem nesciunt
+                        id ullam
+                        laboriosam accusantium eligendi minima pariatur cum consequuntur sunt reprehenderit impedit
+                        nobis? Consectetur,
+                        earum aut!</p>
+                    </div>
+                    <box-icon name="trash"></box-icon>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section id="overlay" onclick="fecharModal()"></section>
+        <div id="criarTarefa" class="modal">
+            <form>
+                <h3>Criar tarefa <box-icon name='x' class='bx-x' size="md" onclick="fecharModal()"></box-icon></h3>
+                <label for="titulo">Título</label>
+                <input type="text" id="titulo" placeholder="Título da tarefa">
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" placeholder="Descrição da tarefa"></textarea>
+                <button>Criar</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="./Script.js"></script>
+</body>
+
+</html>
