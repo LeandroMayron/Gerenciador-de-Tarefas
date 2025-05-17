@@ -25,7 +25,7 @@ function inserirTarefa(listaDeTarefas) {
                     <h5>${tarefa.titulo}</h5>
                     <p>${tarefa.descricao}</p>
                     <div class="actions">
-                        <box-icon name="trash"></box-icon>
+                        <box-icon name='trash' onclick="deletarTarefa(${tarefa.id})"></box-icon>
                     </div> `;
     });
   }
@@ -33,7 +33,7 @@ function inserirTarefa(listaDeTarefas) {
 
 function novaTarefa() {
   event.preventDefault();
-  
+
   let tarefa = {
     titulo: titulo.value,
     descricao: descricao.value,
@@ -48,7 +48,38 @@ function novaTarefa() {
   })
     .then((res) => res.json())
     .then((res) => {
-        fecharModal();
-        buscarTarefas();
+      fecharModal();
+      buscarTarefas();
     });
 }
+
+function deletarTarefa(id) {
+  fetch(`http://localhost:3000/tarefas/${id}`, {
+    method: "DELETE",
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      alert("Tarefa deletada com sucesso!");
+      buscarTarefas();
+    });
+}
+
+function pesquisarTarefas() {
+    let lis = document.querySelectorAll("ul li");
+    if(buscar.value.length > 0) {
+        lis.forEach((li) => {
+            if(!li.children[0].innerText.includes(buscar.value)) {
+                li.classList.add('oculto');
+            } else {
+                li.classList.remove('oculto');
+            }
+        });
+    } else {
+        lis.forEach((li) => {
+            li.classList.remove('oculto');
+        });
+    }
+}
+
+
+
