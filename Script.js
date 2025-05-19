@@ -50,6 +50,8 @@ function novaTarefa() {
     .then((res) => {
       fecharModal();
       buscarTarefas();
+      let form = document.querySelector("#criarTarefa form");
+      form.reset();
     });
 }
 
@@ -66,6 +68,7 @@ function deletarTarefa(id) {
 
 function pesquisarTarefas() {
     let lis = document.querySelectorAll("ul li");
+    console.log(lis);
     if(buscar.value.length > 0) {
         lis.forEach((li) => {
             if(!li.children[0].innerText.includes(buscar.value)) {
